@@ -1,0 +1,13 @@
+FSP Final Project README
+Authors: Chuka (N19440839), Deniz (N19223762) and Anagha (N18869540)
+
+Requirements:
+  Python 2.7
+  C++
+  g++ (4.6.1 or later)
+  make
+
+To Run:
+  navigate to program directory in a terminal
+  type make all
+  type python client.py
