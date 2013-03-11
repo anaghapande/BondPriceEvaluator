@@ -450,7 +450,7 @@ if __name__ == "__main__":
 	c4 = StringVar()
 	start_time = 0.00
 	end_time = 0.00
-	import graph3 as gp
+	import graph as gp
 
 	root.title('Client')
 	root.geometry("%dx%d%+d%+d" % (900, 700, 0, 0))

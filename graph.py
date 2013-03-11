@@ -1,19 +1,20 @@
 from mpl_toolkits.mplot3d import Axes3D
-import matplotlib.pyplot as PLT
-import numpy as NP
+import matplotlib.pyplot as plt
+import numpy as np
 
-fig = PLT.figure()
-ax1 = fig.add_subplot(111, projection='3d')
+def plot_graph(dt):
+	dt = dt.split(' ')
+	fig = plt.figure()
+	width = 10
+	ax = fig.add_subplot(111, projection='3d')
+	for c, z in zip(['c'], [30]):
+		xs = (int(dt[0]), int(dt[1]), int(dt[2]), int(dt[3]), int(dt[4]), int(dt[5]))
+		ys = (int(dt[6]), int(dt[7]), int(dt[8]), int(dt[9]), int(dt[10]), int(dt[11]))
+		ax.bar(xs, ys, zs=z, zdir='y', color='b')
 
-#xpos = NP.random.randint(1, 10, 10)
-#ypos = NP.random.randint(1, 10, 10)
-#num_elements = 10
-#zpos = NP.zeros(num_elements)
-#dx = NP.ones(10)
-#dy = NP.ones(10)
-#dz = NP.random.randint(1, 5, 10)
+	ax.set_xlabel('X-axis: PnL (in millions)')
+	ax.set_ylabel('Y-axis: Frequencies')
+	ax.set_zlabel('Z')
 
-#ax1.bar3d(xpos, ypos, zpos, dx, dy, dz, color='#8E4585')
-ax1.bar3d(5000, 625, 1500, 1, 1, 1, color='#8E4585')
-PLT.show()
+	plt.show()
 
